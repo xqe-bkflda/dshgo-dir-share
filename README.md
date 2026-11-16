@@ -13,11 +13,14 @@
 | 渠道 | 地址 |
 |---|---|
 | 官网 | <https://mt2.cn> |
-| Google Play / 应用商店 | 搜 `MT管理器`，包名 `bin.mt.plus` |
-| Uptodown 镜像（v2.26.11，APK，36.7 MB） | <https://mt-manager.cn.uptodown.com/android> |
-| APKPure 镜像 | <https://apkpure.com/mt-manager/bin.mt.plus> |
+| 官网直链 APK（v2.26.11，版本号 26110366，38.5 MB） | <https://pan.mt2.cn/apk/26110366> |
+| 共存版（包名不同，可与正式版并存） | <https://pan.mt2.cn/apk/26110366/clone> |
+| TargetSdk28 版（终端模拟器需要执行权限时用） | <https://pan.mt2.cn/apk/26110366/target28> |
+| 应用商店 | 搜 `MT管理器`，包名 `bin.mt.plus` |
 
 要求 Android 5.0+。装完记得给它存储权限，否则挂上去了也读不了。
+
+> 国内直接用官网直链最省事，不用挂梯子；应用商店的版本 targetSdk 是 30，应用数据目录被移除了执行权限。
 
 ---
 
