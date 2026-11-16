@@ -1,0 +1,41 @@
+{
+  "name": "dir-share",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "目录共享",
+      "en": "Dir Share"
+    },
+    "icon": "folder-open",
+    "wants": [],
+    "contributes": {
+      "panels": [
+        {
+          "id": "share",
+          "title": {
+            "zh": "目录共享",
+            "en": "Dir Share"
+          },
+          "icon": "folder-open",
+          "placement": [
+            "session.tab",
+            "features",
+            "chat.panel"
+          ]
+        }
+      ]
+    }
+  }
+}
