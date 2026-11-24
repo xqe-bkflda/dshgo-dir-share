@@ -1,6 +1,7 @@
 {
-  "name": "dshgo-dir-share",
+  "name": "dir-share",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "main": "lib/index.js",
   "dsh": {
@@ -36,18 +37,5 @@
         }
       ]
     }
-  },
-  "description": "DSH Go 手机端插件：把工作区目录通过内置 FTP 与 WebDAV 转发给 MT 管理器等客户端挂载",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xqe-bkflda/dshgo-dir-share.git"
-  },
-  "homepage": "https://github.com/xqe-bkflda/dshgo-dir-share#readme",
-  "files": [
-    "lib",
-    "cordis.patch.yml",
-    "README.md",
-    "LICENSE"
-  ]
+  }
 }
