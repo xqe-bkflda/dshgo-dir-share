@@ -1,3 +1,13 @@
+<div align="center">
+  <img src="assets/banner.png" alt="dshgo-dir-share" width="100%">
+</div>
+
+<p align="center">
+[![Plugin](https://img.shields.io/badge/DSH--Go%20plugin-2A3B52?style=flat-square&logo=github&logoColor=white)](https://github.com/xqe-bkflda/dsh-go-market)
+  [![License](https://img.shields.io/badge/license-MIT-3DDC84?style=flat-square)](LICENSE)
+  [![Stars](https://img.shields.io/github/stars/xqe-bkflda/dshgo-dir-share?style=flat-square&color=8FA5BA)](https://github.com/xqe-bkflda/dshgo-dir-share/stargazers)
+</p>
+
 # 目录共享 · DSH Go 插件
 
 把 DSH Go 的工作区目录通过 **FTP** 和 **WebDAV** 转发出来，用 **MT 管理器**（或任何 FTP/WebDAV 客户端）直接挂载读写。
