@@ -1,26 +1,6 @@
-<div align="center">
-  <img src="assets/banner.png" alt="dshgo-dir-share" width="100%">
-</div>
-
-<p align="right">
-  <a href="README_EN.md">English</a> · <b>中文</b>
-</p>
-
-<p align="center">
-[![Plugin](https://img.shields.io/badge/DSH--Go%20plugin-2A3B52?style=flat-square&logo=github&logoColor=white)](https://github.com/xqe-bkflda/dsh-go-market)
-  [![License](https://img.shields.io/badge/license-MIT-3DDC84?style=flat-square)](LICENSE)
-  [![Stars](https://img.shields.io/github/stars/xqe-bkflda/dshgo-dir-share?style=flat-square&color=8FA5BA)](https://github.com/xqe-bkflda/dshgo-dir-share/stargazers)
-</p>
-
-### **一行安装**
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/xqe-bkflda/dshgo-dir-share/main/install.sh | sh
-```
-
 # 目录共享 · DSH Go 插件
 
-把 DSH Go 的工作区目录通过 **FTP** 和 **WebDAV** 转发出来，用 **MT 管理器**（或任何 FTP/WebDAV 客户端）直接挂载读写。
+把 DSH Go 的目录（工作区 `/root/workspace` 或整个 `/root`）通过 **FTP** 和 **WebDAV** 转发出来，用 **MT 管理器**（或任何 FTP/WebDAV 客户端）直接挂载读写。
 
 纯 Node 实现，零第三方依赖：自带 FTP 服务端和 WebDAV 服务端，不走电脑、不走局域网的额外软件。
 
@@ -100,7 +80,7 @@ dsh plugin --profile web add "$DSH_HOME/dsh-go/plugins/local-dir-share"
 | 复制地址 | 复制 FTP 地址 + 账号 + 密码 |
 | 复制密码 | 只复制密码 |
 | 可读写/只读 | 切只读，客户端写不进来 |
-| 换目录 | 在 `工作区` / `手机存储` / `两者` 之间轮换 |
+| 换目录 | 在 `工作区` 与 `根目录 /root` 之间切换 |
 | 刷新 | 立刻刷新面板数据 |
 
 ---
@@ -111,7 +91,7 @@ dsh plugin --profile web add "$DSH_HOME/dsh-go/plugins/local-dir-share"
 
 ```json
 {
-  "mode": "workspace",
+  "mode": "root",
   "ftpPort": 2121,
   "davPort": 8081,
   "user": "mt",
@@ -122,7 +102,7 @@ dsh plugin --profile web add "$DSH_HOME/dsh-go/plugins/local-dir-share"
 }
 ```
 
-- `mode`：`workspace`（根 = 工作区）/ `sdcard`（根 = 手机存储）/ `both`（顶层两个虚拟目录 `/workspace`、`/sdcard`）
+- `mode`：`root`（根 = 整个 `/root`，默认）/ `workspace`（根 = `/root/workspace`）/ `sdcard`（根 = `/sdcard`）/ `both`（顶层两个虚拟目录 `/workspace`、`/sdcard`）
 - `anonymous`：`true` 允许匿名登录（局域网方便，慎用）
 - `readOnly`：`true` 时拒绝一切写入
 - `autoStart`：引擎起来就自动开监听
